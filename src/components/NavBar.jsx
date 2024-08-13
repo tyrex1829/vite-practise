@@ -9,7 +9,12 @@ import {
 function NavBar() {
   return (
     <div className=" flex justify-between py-6 px-12 items-center border-b-2 border-rose-600">
-      <div className="text-rose-600 hover:text-rose-400 cursor-pointer text-5xl font-bold">
+      <div
+        onClick={() => {
+          window.location.href = "/";
+        }}
+        className="text-rose-600 hover:text-rose-400 cursor-pointer text-5xl font-bold"
+      >
         Logo
       </div>
       <div className="flex gap-11 justify-between items-center">

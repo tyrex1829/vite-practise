@@ -17,7 +17,12 @@ function AdminPanel() {
           </p>
         </div>
         <div className="flex justify-center">
-          <button className="bg-rose-600 hover:bg-rose-700 py-4 px-8 rounded-md">
+          <button
+            onClick={() => {
+              window.location.href = "/";
+            }}
+            className="bg-rose-600 hover:bg-rose-700 py-4 px-8 rounded-md"
+          >
             Hero Section
           </button>
         </div>

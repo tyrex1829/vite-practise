@@ -16,7 +16,12 @@ function Hero() {
         </p>
       </div>
       <div className="flex justify-center">
-        <button className="bg-rose-600 hover:bg-rose-700 py-4 px-8 rounded-md">
+        <button
+          onClick={() => {
+            window.location.href = "/admin-panel";
+          }}
+          className="bg-rose-600 hover:bg-rose-700 py-4 px-8 rounded-md"
+        >
           Admin Panel
         </button>
       </div>
