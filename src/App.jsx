@@ -7,6 +7,8 @@ import AdminPanel from "./components/AdminPanel";
 
 function App() {
   const [count, setCount] = useState(0);
+  console.log("I know you are looking for something, Lemme guess code? 😁");
+  console.log("Go with this link - https://github.com/tyrex1829");
 
   return (
     <div className="bg-zinc-900">

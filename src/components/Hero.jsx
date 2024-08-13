@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col justify-center text-slate-200 pt-24 px-12 gap-16">
       <div className="flex flex-col gap-16">
@@ -18,7 +21,7 @@ function Hero() {
       <div className="flex justify-center">
         <button
           onClick={() => {
-            window.location.href = "/admin-panel";
+            navigate("/admin-panel");
           }}
           className="bg-rose-600 hover:bg-rose-700 py-4 px-8 rounded-md"
         >
