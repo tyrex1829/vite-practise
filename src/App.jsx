@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AdminPanel from "./components/AdminPanel";
+import NotFound from "./components/NotFound";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,8 +17,9 @@ function App() {
         <NavBar />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Hero />}></Route>
-            <Route path="/admin-panel" element={<AdminPanel />}></Route>
+            <Route path="/" element={<Hero />} />
+            <Route path="/admin-panel" element={<AdminPanel />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </div>
