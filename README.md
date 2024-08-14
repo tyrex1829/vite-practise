@@ -10,4 +10,4 @@
 6. Context Api
 7. Recoil
 8. Redux-ToolKit
-9. Custom Hoooks
+9. Custom Hooks
