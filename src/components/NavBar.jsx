@@ -5,13 +5,16 @@ import {
   faTwitter,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 function NavBar() {
+  const navigate = useNavigate();
+
   return (
     <div className=" flex justify-between py-6 px-12 items-center border-b-2 border-rose-600">
       <div
         onClick={() => {
-          window.location.href = "/";
+          navigate("/");
         }}
         className="text-rose-600 hover:text-rose-400 cursor-pointer text-5xl font-bold"
       >
