@@ -1,8 +1,8 @@
 import { createContext } from "react";
 
-const moods = {
+export const moods = {
   happy: "😁",
   sad: "😔",
 };
 
-export const moodContext = createContext(moods);
+export const MoodContext = createContext(moods);

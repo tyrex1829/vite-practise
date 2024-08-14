@@ -3,6 +3,8 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 const Hero = lazy(() => import("./components/Hero"));
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { MoodContext, moods } from "./components/Context";
+import MoodEmoji from "./components/MoodEmoji";
 const AdminPanel = lazy(() => import("./components/AdminPanel"));
 const NotFound = lazy(() => import("./components/NotFound"));
 
@@ -23,6 +25,10 @@ function App() {
               element={
                 <Suspense fallback={<div>Loading...</div>}>
                   <Hero />
+                  {/*context api used here */}
+                  <MoodContext.Provider value={moods.happy}>
+                    <MoodEmoji />
+                  </MoodContext.Provider>
                 </Suspense>
               }
             />
@@ -31,6 +37,10 @@ function App() {
               element={
                 <Suspense fallback={<div>Loading...</div>}>
                   <AdminPanel />
+                  {/*context api used here */}
+                  <MoodContext.Provider value={moods.sad}>
+                    <MoodEmoji />
+                  </MoodContext.Provider>
                 </Suspense>
               }
             />
