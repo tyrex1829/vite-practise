@@ -5,6 +5,7 @@ import {
   faTwitter,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { faList } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 function NavBar() {
@@ -19,6 +20,20 @@ function NavBar() {
         className="text-rose-600 hover:text-rose-400 cursor-pointer text-5xl font-bold"
       >
         Logo
+      </div>
+      <div
+        onClick={() => {
+          navigate("/todolist");
+        }}
+        className="flex items-center gap-3 cursor-pointer mt-2"
+      >
+        <span className="text-rose-600 hover:text-rose-400 text-3xl font-bold">
+          Todo List
+        </span>
+        <FontAwesomeIcon
+          className="text-rose-600 hover:text-rose-400 text-2xl mt-1 font-bold"
+          icon={faList}
+        />
       </div>
       <div className="flex gap-11 justify-between items-center">
         <a
