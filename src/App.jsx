@@ -16,8 +16,8 @@ function App() {
   console.log("Go with this link - https://github.com/tyrex1829");
 
   return (
-    <div className="bg-zinc-900">
-      <div className="max-w-screen-2xl mx-auto h-screen bg-zinc-900">
+    <div className="bg-zinc-900 min-h-screen pb-4">
+      <div className="max-w-screen-2xl mx-auto min-h-screen bg-zinc-900">
         <BrowserRouter>
           <NavBar />
           <Routes>
