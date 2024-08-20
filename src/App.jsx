@@ -5,6 +5,7 @@ const Hero = lazy(() => import("./components/Hero"));
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { MoodContext, moods } from "./components/Context";
 import MoodEmoji from "./components/MoodEmoji";
+import TodoList from "./components/TodoList";
 const AdminPanel = lazy(() => import("./components/AdminPanel"));
 const NotFound = lazy(() => import("./components/NotFound"));
 
@@ -41,6 +42,14 @@ function App() {
                   <MoodContext.Provider value={moods.sad}>
                     <MoodEmoji />
                   </MoodContext.Provider>
+                </Suspense>
+              }
+            />
+            <Route
+              path="/todolist"
+              element={
+                <Suspense fallback={<div>Loading...</div>}>
+                  <TodoList />
                 </Suspense>
               }
             />
